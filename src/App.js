@@ -7,7 +7,6 @@ import Container from "./Container";
 import { useState } from "react";
 
 
-
 function App() {
   const [hideDoneTasks, setHideDoneTasks] = useState(false);
   const [tasks, setTasks] = useState([
@@ -34,9 +33,20 @@ function App() {
 
   const setAllDone = () => {
     setTasks(tasks => tasks.map(task => ({
-      ...task, 
+      ...task,
       done: true,
     })));
+  };
+
+  const addNewTask = (newTaskContent) => {
+    setTasks(tasks => [
+      ...tasks,
+      {
+        content: newTaskContent,
+        done: false,
+        id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
+      },
+    ]);
   };
 
   return (
@@ -46,7 +56,7 @@ function App() {
       />
       <Section
         title="Add a new Task"
-        body={<Form />}
+        body={<Form addNewTask={addNewTask}/>}
       />
       <Section
         title="Task List"
