@@ -1,0 +1,25 @@
+.buttons {
+    border: none;
+    color: teal;
+    background: transparent;
+    transition: 2s;
+    padding: 5px;
+}
+
+.buttons:hover {
+    color: rgb(5, 182, 182);
+    cursor: pointer;
+}
+
+.buttons:disabled {
+    color: rgb(204, 191, 191);
+    cursor: default;
+}
+
+@media (max-width: 767px) {
+    .section__container {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+    }
+  }
