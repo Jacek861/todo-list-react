@@ -3,7 +3,7 @@
 ## Description
 
 ## How it works
-
+![Tasks-List-React GIF](src/images/TasksAnimation.gif)
 ### Demo (https://jacek861.github.io/todo-list-react/)
 
 ## Technologies
