@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const DivButtons = styled.divButtons`
+export const StyledButtons = styled.button`
   border: none;
   color: teal;
   background: transparent;
@@ -13,7 +13,7 @@ export const DivButtons = styled.divButtons`
   }
 `;
 
-export const DivContainer = styled.container`
+export const ButtonsContainer = styled.div`
     @media (max-width: 767px) {
       display: flex;
       flex-direction: column;
