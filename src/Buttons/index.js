@@ -1,19 +1,19 @@
-import { ButtonsContainer, StyledButtons } from "./styled.js"
+import { ButtonsContainer, StyledHideButton, StyleDoneButton } from "./styled.js"
 
 const Buttons = ({ tasks, hideDoneTasks, toggleHideDone, setAllDone }) => (
 
   <ButtonsContainer>
     {tasks.length > 0 && (
       <>
-        <StyledButtons onClick={toggleHideDone}>
+        <StyledHideButton onClick={toggleHideDone}>
           {hideDoneTasks ? "Show" : "Hide"} Complited Task
-        </StyledButtons >
-        <StyledButtons 
+        </StyledHideButton >
+        <StyleDoneButton 
           onClick={setAllDone}
           disabled={tasks.every(({ done }) => done)}
         >
           Finish All Tasks
-        </StyledButtons >
+        </StyleDoneButton >
       </>
     )}
   </ButtonsContainer>

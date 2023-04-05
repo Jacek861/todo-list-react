@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledButtons = styled.button`
+export const StyledHideButton = styled.button`
   border: none;
   color: teal;
   background: transparent;
@@ -9,6 +9,13 @@ export const StyledButtons = styled.button`
 
   &:hover {
     color: rgb(5, 182, 182);
+  }
+`;
+
+export const StyleDoneButton = styled(StyledHideButton)`
+  background: lightgrey;
+
+  &:hover {
     cursor: pointer;
   }
 `;
